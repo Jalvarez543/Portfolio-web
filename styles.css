@@ -266,7 +266,17 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Empuja el contenido hacia abajo */
-    min-height: 320px; /* Asegura que todas tengan la misma altura mínima */
+    min-height: 350px; /* Asegura que todas tengan la misma altura mínima */
+}
+
+/* Estilos para los botones */
+.project-card a {
+    display: inline-block;
+    padding: 10px 15px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Efecto al pasar el cursor sobre la tarjeta */
@@ -282,7 +292,7 @@ section {
 /* Estilos para el botón */
 .project-btn {
     display: inline-block;
-    margin-top: 10px;
+    margin-bottom: 5px;
     padding: 10px 15px;
     background-color: black;
     color: white;
@@ -298,6 +308,19 @@ section {
     color: black;
     border: 2px solid black;
 }
+
+/* Botón "Ver repositorio" */
+.repo-btn {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.repo-btn:hover {
+    background-color: black;
+    color: white;
+}
+
 
 .tarjeta {
     background-color: white;
