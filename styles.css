@@ -11,13 +11,12 @@ body {
 
 /* Ajustes para la sección de bienvenida */
 .welcome-section {
-    height: 100vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #f5f5dc;
-    padding-top: 30px; /* Reducimos este valor para subir el contenido mucho más */
 }
 
 .welcome-section h2 {
@@ -30,6 +29,113 @@ body {
     font-size: 4.5em; /* Tamaño de la letra del nombre */
     margin: 0;
     font-weight: 600; /* Estilo más grueso para destacar */
+}
+
+
+/* Contenedor general para las secciones en formato horizontal */
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    gap: 40px; /* Espacio entre texto e imagen */
+}
+
+/* Ajustes del texto */
+.content-container .text {
+    width: 55%;
+    text-align: left;
+}
+
+/* Ajustes de la imagen */
+.content-container .image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container .image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ajustes para la sección "Sobre mí" */
+.about-section {
+    min-height: 70vh; /* Reducimos la altura para que no haya tanto espacio */
+    margin-top: 50px;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    padding: 20px 0; /* Espaciado interno */
+}
+
+.about-section .content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 40px; /* Espacio entre texto e imagen */
+}
+
+.about-section .text {
+    width: 55%; /* Ancho del texto */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.about-section .image {
+    width: 40%; /* Ancho de la imagen */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+.about-section .image img {
+    max-width: 150px; /* Tamaño pequeño como foto de carnet */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Ajustes para la sección "Educación" */
+.education-section .content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 40px; /* Espacio entre texto e imágenes */
+}
+
+.education-section .text {
+    width: 55%; /* Ancho del texto */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.education-section .image {
+    width: 40%; /* Ancho del contenedor de imágenes */
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* Dos columnas */
+    grid-template-rows: repeat(2, auto); /* Dos filas */
+    gap: 15px; /* Espacio entre imágenes */
+    justify-content: center;
+    align-items: center;
+}
+
+.education-section .image img {
+    width: 80px; /* Las imágenes ocupan todo el espacio disponible */
+    height: auto;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Ajustes para las otras secciones */
+.education-section {
+    min-height: 70vh; /* Reducimos la altura para que no haya tanto espacio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0; /* Espaciado interno */
 }
 
 .navbar {
@@ -102,10 +208,77 @@ section {
     margin: 20px 0;
 }
 
-.proyectos-container {
+/* Contenedor general para centrar las tarjetas */
+
+.projects-section {
+    display: flex;
+    flex-direction: column; /* Asegura que el título esté arriba y las tarjetas abajo */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra verticalmente si la altura es suficiente */
+    text-align: center;
+    min-height: 70vh;
+    padding: 20px 0;
+}
+
+.projects-section h2 {
+    font-size: 2.5em; /* Asegura que sea un encabezado grande */
+    margin-bottom: 20px; /* Espacio entre el título y las tarjetas */
+    font-weight: 600;
+}
+
+.projects-container{
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 20px; /* Espacio entre tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas pequeñas */
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Diseño de las tarjetas */
+.project-card {
+    background-color: white;
+    border-radius: 12px; /* Bordes redondeados */
+    padding: 20px;
+    width: 250px; /* Tamaño razonable */
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el contenido hacia abajo */
+    min-height: 320px; /* Asegura que todas tengan la misma altura mínima */
+}
+
+/* Efecto al pasar el cursor sobre la tarjeta */
+.project-card:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta ligeramente */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card .project-btn {
+    margin-top: auto; /* Empuja el botón hacia la parte inferior */
+}
+
+/* Estilos para el botón */
+.project-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cambio de color en hover */
+.project-btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
 }
 
 .tarjeta {
@@ -115,21 +288,88 @@ section {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-form input, form textarea {
-    display: block;
-    width: 80%;
-    margin: 10px auto;
+/*CONTACTO*/
+
+.contact-section {
+    display: flex;
+    flex-direction: column; /* Título arriba, formulario abajo */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center;
+    min-height: 70vh;
+    padding: 30px 0;
+    margin-top: -10px;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px; /* Espacio entre el título y el formulario */
+    font-weight: 600;
+}
+
+.contact-form {
+    background: white;
+    padding: 20px;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    width: 50%; /* Tamaño del formulario */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre los elementos */
+    box-sizing: border-box; /* Asegura que padding no afecte el ancho total */
+}
+
+/* Contenedor de Nombres y Apellidos en la misma línea */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%; /* Asegura que el grupo no se desborde */
+}
+
+/* Ajuste para que ambos cuadros tengan el mismo ancho */
+.input-group input {
+    width: 100%; 
+}
+
+/* Ajustes generales de los campos */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1em;
+    box-sizing: border-box; /* Evita que padding afecte el ancho */
 }
 
-button {
-    background-color: #333;
+/* Ajustes para la caja de texto grande (Asunto) */
+.contact-form textarea {
+    height: 120px; /* Espacio suficiente para escribir */
+    resize: none; /* Evita que se redimensione */
+}
+
+/* Estilo del botón de enviar */
+.submit-btn {
+    width: 100%;
+    background-color: black;
     color: white;
+    padding: 12px;
+    font-size: 1em;
     border: none;
-    padding: 10px 20px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Cambio de color en hover */
+.submit-btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+/* Ajustes para el footer */
 footer {
     background-color: #333;
     color: white;

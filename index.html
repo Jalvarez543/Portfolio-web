@@ -19,53 +19,70 @@
     
     <section class="welcome-section">
         <h2>Bienvenido/a a mi portafolio</h2>
-        <h1>Mi nombre es <br> [Nombre y Apellido]</h1>
-        <p>Aquí puedes conocer más sobre mi experiencia y proyectos.</p>
+        <h1>Mi nombre es <br> Joselyn Alvarez.</h1>
+        <p>Soy una desarrolladora web junior aficionada a la estética, el diseño y la mejora constante.</p>
     </section>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
     <section id="about" class="about-section">
-        <h2>Sobre mí</h2>
-        <p>Aquí irá una descripción detallada sobre mí, con al menos 300 caracteres para brindar una mejor perspectiva sobre mi experiencia y habilidades. Me especializo en el desarrollo web y la programación, buscando siempre mejorar mis habilidades y contribuir con soluciones innovadoras.</p>
-        <img src="about-image.jpg" alt="Imagen sobre mí">
+        <div class="content-container">
+            <div class="text">
+                <h2>Sobre mí</h2>
+                <p>Mi especialidad es el diseño web y busco siempre aportar innovación a mis trabajos. Me gusta mucho diseñar sitios web de todo tipo, pues sin importar el rubro, pienso que se le puede sacar provecho al diseño de una página, más allá de su funcionalidad, haciéndola lucir pulcra y estética.</p>
+            </div>
+            <div class="image">
+                <img src="./imagenes/avatar.jpg" alt="Imagen sobre mí">
+            </div>
+        </div>
     </section>
     
     <section id="education" class="education-section">
-        <h2>Educación</h2>
-        <p>Esta sección detalla mi educación y conocimientos en programación, incluyendo el dominio de diversos lenguajes y tecnologías. He trabajado con múltiples herramientas y plataformas para construir aplicaciones web eficientes y funcionales.</p>
-        <div class="education-icons">
-            <div class="language-icon">HTML</div>
-            <div class="language-icon">CSS</div>
-            <div class="language-icon">JS</div>
-            <div class="language-icon">Python</div>
+        <div class="content-container">
+            <div class="text">
+                <h2>Educación</h2>
+                <p>Actualmente, soy estudiante de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas (UPC). Asimismo, he completado el curso "Programación desde Cero" de Certus, el cual me ha brindado bases sobre algunos lenguajes como: HTML, CSS, JavaScript y Python.</p>
+            </div>
+            <div class="image">
+                <img src="./imagenes/html.png" alt="HTML">
+                <img src="./imagenes/css.svg" alt="CSS">
+                <img src="./imagenes/js.png" alt="JavaScript">
+                <img src="./imagenes/python.png" alt="Python">
+            </div>
         </div>
     </section>
     
     <section id="projects" class="projects-section">
         <h2>Proyectos</h2>
-        <div class="project-card">Proyecto 1</div>
-        <div class="project-card">Proyecto 2</div>
-        <div class="project-card">Proyecto 3</div>
+        <br><br>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Conjunto de herramientas de cálculo</h3>
+                <p>Proyecto simple enfocado a apoyar en cálculos básicos como operaciones matemáticas, contar el número de caracteres y enumerar productos para una lista de compras.</p>
+                <a href="https://ejemplo.com/proyecto1" target="_blank" class="project-btn">Ver más</a>
+            </div>
+            <div class="project-card">
+                <h3>Asignador de edades</h3>
+                <p>Pequeño proyecto que busca simular ser un asignador estatal de edades para sus ciudadanos.</p>
+                <a href="https://ejemplo.com/proyecto2" target="_blank" class="project-btn">Ver más</a>
+            </div>
+            <div class="project-card">
+                <h3>Lalo's Carnes & Carcajadas</h3>
+                <p>Página web inspirada en una 'steakhouse', es decir, un restaurante especializado en servir filetes de carne vacuno. Presenta un diseño elegante y cálido para sus comensales.</p>
+                <a href="https://ejemplo.com/proyecto3" target="_blank" class="project-btn">Ver más</a>
+            </div>
+        </div>
     </section>
     
     <section id="contact" class="contact-section">
         <h2>Contáctame</h2>
-        <form>
-            <input type="text" name="nombre" placeholder="Nombres" required>
-            <input type="text" name="apellido" placeholder="Apellidos" required>
+        <form class="contact-form">
+            <div class="input-group">
+                <input type="text" name="nombre" placeholder="Nombres" required>
+                <input type="text" name="apellido" placeholder="Apellidos" required>
+            </div>
             <input type="email" name="correo" placeholder="Correo electrónico" required>
             <input type="tel" name="telefono" placeholder="Teléfono celular" required>
             <textarea name="asunto" placeholder="Asunto..." required></textarea>
-            <button type="submit">Enviar</button>
+            <button type="submit" class="submit-btn">Enviar</button>
         </form>
     </section>
     
@@ -75,7 +92,7 @@
             <a href="#" class="github">GitHub</a>
             <a href="#" class="instagram">Instagram</a>
         </div>
-        <p>&copy; 2024 Todos los derechos reservados.</p>
+        <p>&copy; 2025 Joselyn Alvarez. Todos los derechos reservados.</p>
     </footer>
     
     <script src="script.js"></script>
