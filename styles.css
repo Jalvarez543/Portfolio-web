@@ -6,6 +6,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    padding-top: 60px; /* Ajusta según la altura de la navbar */
 }
 
 /* Ajustes para la sección de bienvenida */
@@ -16,7 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #f5f5dc;
-    padding-top: 80px; /* Reducimos este valor para subir el contenido */
+    padding-top: 30px; /* Reducimos este valor para subir el contenido mucho más */
 }
 
 .welcome-section h2 {
@@ -34,13 +35,15 @@ body {
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.9); /* Oscuro con algo de transparencia */
     color: white;
     padding: 10px 0;
     text-align: center;
     box-shadow: 0px 4px 2px -2px gray;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 .navbar.transparent {
@@ -51,8 +54,9 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .navbar ul li {
@@ -60,16 +64,19 @@ body {
 }
 
 .navbar ul li a {
-    color: white;
+    color: white; /* Letras blancas */
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease-in-out; /* Transición suave para el color */
 }
 
-header {
-    padding: 100px 20px 20px;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: fadeIn 1.5s ease-in-out forwards;
+.navbar.scrolled {
+    background-color: rgba(245, 245, 220, 0.97) !important; /* Color crema sólido */
+    color: black !important;
+}
+
+.navbar.scrolled a {
+    color: black !important;
 }
 
 @keyframes fadeIn {
@@ -82,6 +89,10 @@ header {
 .description {
     font-style: italic;
     margin-top: 10px;
+}
+
+section {
+    scroll-margin-top: 80px; /* Ajusta este valor si la barra es más grande */
 }
 
 .info-section {
