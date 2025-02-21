@@ -1,12 +1,30 @@
 /* styles.css */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color: #f5f5dc;
     color: black;
     text-align: center;
     margin: 0;
     padding: 0;
     padding-top: 60px; /* Ajusta según la altura de la navbar */
+}
+
+/* Títulos principales */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Texto de los párrafos */
+p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Botones y enlaces */
+button, a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
 }
 
 /* Ajustes para la sección de bienvenida */
@@ -294,29 +312,32 @@ section {
     display: flex;
     flex-direction: column; /* Título arriba, formulario abajo */
     align-items: center; /* Centra el contenido horizontalmente */
-    justify-content: center; /* Centra verticalmente */
+    justify-content: space-between; 
     text-align: center;
     min-height: 70vh;
-    padding: 30px 0;
-    margin-top: -10px;
+    padding: 50px 0;
+    margin-top: -20px;
 }
 
 .contact-section h2 {
     font-size: 2.5em;
-    margin-bottom: 10px; /* Espacio entre el título y el formulario */
+    margin-bottom: 50px; /* Espacio entre el título y el formulario */
     font-weight: 600;
 }
 
 .contact-form {
     background: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 12px; /* Bordes redondeados */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    width: 50%; /* Tamaño del formulario */
+    width: 40%; /* Tamaño del formulario */
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espaciado entre los elementos */
+    gap: 25px; /* Espaciado entre los elementos */
     box-sizing: border-box; /* Asegura que padding no afecte el ancho total */
+    align-items: center;
+    justify-content: center;
 }
 
 /* Contenedor de Nombres y Apellidos en la misma línea */
@@ -373,10 +394,25 @@ section {
 footer {
     background-color: #333;
     color: white;
-    padding: 10px;
+    padding: 20px 0;
+    text-align: center;
 }
 
-.social-icons a img {
-    width: 30px;
-    margin: 5px;
+/* Contenedor de iconos */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los iconos */
+    margin-bottom: 10px;
+}
+
+.social-icons img {
+    width: 40px; /* Tamaño uniforme */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el cursor */
+.social-icons a:hover img {
+    transform: scale(1.2); /* Hace que los iconos crezcan ligeramente */
 }
